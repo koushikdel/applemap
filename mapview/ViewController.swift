@@ -67,8 +67,11 @@ class ViewController: UIViewController , MKMapViewDelegate,  CLLocationManagerDe
     var maparray = [MapData]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        maparray.append(MapData(subject: "koushik", lat: 22.5726, long: 88.3639, details: "IOs Devloper", isclick: false))
-        maparray.append(MapData(subject: "Rohit", lat: 28.7041, long: 77.1025, details: "IOs Devloper", isclick: false))
+        maparray.append(MapData(subject: "koushik", lat: 22.5726, long: 88.3639, details: "IOS Devloper", isclick: false))
+        maparray.append(MapData(subject: "Rohit", lat: 28.7041, long: 77.1025, details: "PHP Devloper", isclick: false))
+         maparray.append(MapData(subject: "Bikas", lat: 12.9716, long: 77.5946, details: ".NET Devloper", isclick: false))
+        maparray.append(MapData(subject: "Milon", lat: 25.4358, long: 81.8463, details: "Web Devloper", isclick: false))
+        maparray.append(MapData(subject: "Suman", lat: 21.1458, long: 79.0882, details: "Android Devloper", isclick: false))
 //        maparray.append(MapData(subject: "Suman", lat: 22.5726, long: 88.3639, details: "IOs Devloper", isclick: false))
 //        maparray.append(MapData(subject: "Debu", lat: 22.5726, long: 88.3639, details: "IOs Devloper", isclick: false))
 //        maparray.append(MapData(subject: "Snumt", lat: 22.5726, long: 88.3639, details: "IOs Devloper", isclick: false))
@@ -131,7 +134,7 @@ class ViewController: UIViewController , MKMapViewDelegate,  CLLocationManagerDe
             let annotation = ImageAnnotation()
             annotation.coordinate = CLLocationCoordinate2DMake(maparray[i].lat!, maparray[i].long!)
             annotation.tag = "\(i)"
-            annotation.image = UIImage(named: "location")
+            annotation.image = UIImage(named: "Bullet")
             annotation.title = "\(maparray[i].subject ?? "")"
             annotation.subtitle = "\(maparray[i].details ?? "")"
             pokemonMap.addAnnotation(annotation)
@@ -164,7 +167,7 @@ class ViewController: UIViewController , MKMapViewDelegate,  CLLocationManagerDe
                     maparray[i].isclick! = !maparray[i].isclick!
                     let images = CustomAnnotation(coordinate: CLLocationCoordinate2DMake(maparray[i].lat!, maparray[i].long!))
                     images.title = "\(maparray[i].details!)"
-                    images.imageName = "Bullet"
+                    images.imageName = "demo3"
                     mapView.addAnnotation(images)
                 }
                 
